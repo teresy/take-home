@@ -175,7 +175,7 @@ generateSignupPage res req model =
 
         jobs : Application -> String
         jobs application =
-            List.map (\job -> job.name) application.jobs
+            List.map .name application.jobs
                 |> String.join ","
 
         checkValidity : (Candidate, Application) -> Task String (Candidate, Application)

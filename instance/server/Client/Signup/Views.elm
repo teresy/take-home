@@ -22,7 +22,7 @@ signUpForTakeHomeView testConfig =
             [ class SignupFormContainer ]
             [ emailField
             , applicationIdField
-            , chooseRole (List.map (\test -> test.name) testConfig.tests)
+            , chooseRole (List.map .name testConfig.tests)
             , submitField
             ]
         ]
